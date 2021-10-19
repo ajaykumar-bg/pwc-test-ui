@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+.app {
+	margin: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* CSS Forms */
+
+* {
+	box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style the search field */
+form.search-input input[type='text'] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Style the submit button */
+form.search-input button {
+	float: left;
+	width: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+form.search-input {
+	display: flex;
+	margin-bottom: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Clear floats */
+form.search-input::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+button {
+	padding: 10px;
+	background: #04aa6d;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none; /* Prevent double borders */
+	cursor: pointer;
+}
+
+button:hover {
+	background: green;
+}
+
+/* CSS Table */
+
+table {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table td,
+table th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+table tr:hover {
+	background-color: #ddd;
+}
+
+table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04aa6d;
+	color: white;
+}
+
+/* CSS Button */
+
+.error {
+	color: red;
+}
+
+.loading {
+	font-size: 24px;
+	font-weight: bold;
+	margin-left: 40%;
+	margin-top: 20%;
+}
+
+/* Pagination */
+
+.pagination {
+	margin-top: 30px;
+	display: inline-block;
+}
+
+.pagination button {
+	background-color: #fff;
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.pagination button.active {
+	background-color: #4caf50;
+	color: white;
+}
+
+.pagination button:disabled,
+button[disabled] {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+	cursor: not-allowed;
+}
+
+.pagination button:hover:not(.active) {
+	background-color: #ddd;
 }
