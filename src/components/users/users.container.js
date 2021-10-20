@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import UserList from './user-list.component';
-import SearchBar from '../common/Searchbar';
+import SearchBar from '../common/search-bar.component';
 import { SERVER_URL } from '../../constants';
 
 const API_URL = `${SERVER_URL}/users`;
